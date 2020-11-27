@@ -40,7 +40,7 @@ email.addEventListener("mouseleave", function () {
     tooltip.innerHTML = "Click to copy email!";
 });
 email.addEventListener("click", function () {
-    var promise = navigator.clipboard.writeText("nilpatel.cs@gmail.com");
+    var promise = navigator.clipboard.writeText('nilpatel.cs@gmail.com');
     promise.then(
         function () {
             tooltip.innerHTML = "Copied!";
