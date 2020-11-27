@@ -1,7 +1,6 @@
 const canvas = document.getElementById("djikstra");
 const context = canvas.getContext("2d");
 canvas.width = document.body.clientWidth;
-console.log(canvas.width);
 canvas.height = document.body.clientHeight;
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
