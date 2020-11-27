@@ -20,7 +20,9 @@
 }
 
 .mobile{
+    width:95%;
     margin-top:10%;
+    padding:1%;   
 }
 .mobile h1{
     font-size: x-large;
@@ -43,9 +45,6 @@ h1{
     grid-area:bottom;
 }
 .grid-1, .grid-2, .grid-3{
-    padding: 1%;
-    padding-left: 5%;
-    padding-right: 5%;
     background-color:#303030;
     color: whitesmoke;
     display:grid;
@@ -102,11 +101,6 @@ h1{
         "left right";
     }
 
-}
-@media only screen and (max-width:1024px){
-    #fullPage{
-        display:none;
-    }
 }
 
 @media only screen and (min-width:1025px){
@@ -257,5 +251,10 @@ h1{
         padding-right: 22%;
         right: 1%;
         opacity: .3;
+    }
+}
+@media only screen and (max-width:1024px){
+    #fullPage{
+        display:none;
     }
 }
