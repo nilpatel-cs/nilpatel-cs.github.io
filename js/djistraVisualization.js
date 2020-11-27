@@ -1,10 +1,13 @@
 const canvas = document.getElementById("djikstra");
 const context = canvas.getContext("2d");
-if(iOS())
+if(iOS()){
     canvas.width = screen.width;
-else
+    canvas.height = screen.height;
+}
+else{
     canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight;
+}
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
