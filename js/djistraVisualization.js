@@ -1,6 +1,9 @@
 const canvas = document.getElementById("djikstra");
 const context = canvas.getContext("2d");
-canvas.width = window.innerWidth;
+if(iOS())
+    canvas.width = screen.width;
+else
+    canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
@@ -308,7 +311,20 @@ function djikstra() {
 
 
   //calculate the distance between two particles
-  function dist(u, v) {
-    result = Math.sqrt(Math.pow(u.x - v.x, 2) + Math.pow(u.y - v.y, 2));
-    return result;
-}
+    function dist(u, v) {
+        result = Math.sqrt(Math.pow(u.x - v.x, 2) + Math.pow(u.y - v.y, 2));
+        return result;
+    }
+
+    function iOS() {
+        return [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+    }
