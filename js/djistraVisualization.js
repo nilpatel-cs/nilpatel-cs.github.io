@@ -1,13 +1,9 @@
 const canvas = document.getElementById("djikstra");
 const context = canvas.getContext("2d");
-if(iOS()){
-    canvas.width = screen.width;
-    canvas.height = screen.height;
-}
-else{
+
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-}
+
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
@@ -26,13 +22,12 @@ if (window.innerWidth > 1024 || screen.width >1024) {
     });
 
     window.onresize = function () { 
-        if(window.innerWidth<=1024 || screen.width <= 1024){
+        if(window.innerWidth<=1024){
             location.reload();
         }
-        else{
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-        } 
+        
     } //if  I dont do this resize ruins the particles
 
     window.addEventListener("mouseout", function (event) {
