@@ -1,0 +1,325 @@
+﻿
+
+/*css for top navigation bar*/
+nav a {
+    display:block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color:whitesmoke;
+    font-size: x-large;
+}
+    nav a:hover {
+    text-decoration:none;
+    color:white;
+    }
+.navbar{
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    z-index: 1;
+    padding-left:30%;
+    padding-right: 30%;
+    background-color: #303030;
+}
+    
+/*css for line animation on top menu items*/
+.navbar a{
+    position: relative;
+    padding:.5%;
+}
+.navbar a::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    background-color: darkorange;
+    height: 3px;
+    width: 0%;
+    transition: .2s all ease-in-out;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+/* Border X get width  */
+.navbar a:before, .navbar a:after {
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 3px;
+    content: '';
+    background-color: darkOrange;
+    transition: all 0.3s;
+}
+
+.navbar a:before {
+    left: 0px;
+    top: 0px;
+}
+
+.navbar a:after {
+    right: 0px;
+    bottom: 0px;
+}
+
+.navbar a:hover:before, .navbar a:hover:after {
+    opacity: 1;
+    width: 100%;
+}
+/*css for social nav*/
+.social-nav {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    z-index: 1;
+    background-color: #303030;
+    
+}
+.social-nav a{
+    color:whitesmoke;
+    padding:.5%;
+    float:right;
+}
+.social-nav a:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.5);
+}
+/*css for modal*/
+.modal-header {
+    background-color: #505050;
+}
+
+.modal-body {
+    background-color: #303030;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+
+.modal-content {
+    background: transparent;
+}
+
+#email {
+    cursor: pointer;
+}
+
+#tooltip {
+    visibility: hidden;
+    background: darkorange;
+    color: #151515;
+    padding: .5rem;
+    position: absolute;
+    box-shadow: .25rem .5rem;
+    opacity: .8;
+    left: 50%;
+    border-radius: .3rem;
+    transform: translateX(-50%);
+}
+.close {
+color:whitesmoke;
+}
+    .close:hover {
+        color: white;
+        transition: all .2s ease-in-out;
+        transform: scale(1.5);
+    }
+    .close:focus {
+    outline:none;
+    }
+
+/*mobile nav css*/
+.menu-btn {
+    padding: 5% 5%;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+    .menu-btn:hover {
+        opacity: 0.7;
+    }
+
+    .menu-btn.active:hover {
+        opacity: 0.7;
+    }
+
+    .menu-btn:focus {
+        outline: 0;
+    }
+
+    .menu-btn.active .menu-line,
+    .menu-btn.active .menu-line::before,
+    .menu-btn.active .menu-line::after {
+        background-color: #ffffff;
+    }
+
+.menu-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-line {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+    .menu-line, .menu-line::before, .menu-line::after {
+        width: 40px;
+        height: 4px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease;
+    }
+
+        .menu-line::before, .menu-line::after {
+            content: "";
+            display: block;
+        }
+
+        .menu-line::before {
+            top: -10px;
+        }
+
+        .menu-line::after {
+            bottom: -10px;
+        }
+
+
+/*
+   * Elastic
+   */
+.menu-btn .menu-line {
+    top: 2px;
+    transition-duration: 0.275s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+    .menu-btn .menu-line::before {
+        top: 10px;
+        transition: opacity 0.125s 0.275s ease;
+    }
+
+    .menu-btn .menu-line::after {
+        top: 20px;
+        transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+.menu-btn.active .menu-line {
+    transform: translate3d(0, 10px, 0) rotate(135deg);
+    transition-delay: 0.075s;
+}
+
+    .menu-btn.active .menu-line::before {
+        transition-delay: 0s;
+        opacity: 0;
+    }
+
+    .menu-btn.active .menu-line::after {
+        transform: translate3d(0, -20px, 0) rotate(-270deg);
+        transition-delay: 0.075s;
+    }
+/*code for button ends*/
+
+
+/*code for menu wrapper and content*/
+.menu {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 0%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right bottom, #121212, rgb(0,0,50));
+    opacity: .8;
+    overflow: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.menu-content {
+    position: absolute;
+    top:45%;
+    transform:translateY(-50%);
+    font-family: 'Montserrat',sans-serif;
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+
+
+/* The navigation links inside the overlay */
+.menu a {
+    padding: 2rem;
+    display: block;
+    text-decoration: none;
+    font-size: medium;
+    color: whitesmoke;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/*social links at bottom of curtain menu*/
+.menu-social{
+    text-align:center;
+    position:absolute;
+    width:100%;
+    bottom:1%;
+  
+}
+.menu-social a{
+    display:inline-block;
+    font-size:medium;
+    padding:1rem;
+}
+
+.menu button:focus {
+    outline: 0;
+}
+
+
+/*Queries to switch from mobile menu to desktop menu and viceversa and one to adjust icon size*/
+@media (min-height: 700px) {
+    .mobile-nav a{
+        font-size: x-large;
+    }
+}
+@media (min-height: 1000px) {
+    .mobile-nav a {
+        font-size: xx-large;
+    }
+}
+@media (min-width: 1025px) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .desktop-nav {
+        display: none;
+    }
+}
