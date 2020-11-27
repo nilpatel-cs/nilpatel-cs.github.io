@@ -1,13 +1,13 @@
 const canvas = document.getElementById("djikstra");
 const context = canvas.getContext("2d");
-canvas.width = window.screen.width;
+canvas.width = document.body.clientWidth;
 console.log(canvas.width);
-canvas.height = window.screen.height;
+canvas.height = document.body.clientHeight;
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
 
-if (window.screen.width > 1024) {
+if (document.body.clientWidth > 1024) {
     var particleArray = null;
     let mouse = {
         x: -1,
@@ -21,12 +21,12 @@ if (window.screen.width > 1024) {
     });
 
     window.onresize = function () { 
-        if(window.screen.width<=1024){
+        if(document.body.clientWidth<=1024){
             location.reload();
         }
         else{
-        canvas.width = window.screen.width;
-        canvas.height = window.screen.height;
+        canvas.width = document.body.clientWidth;
+        canvas.height = document.body.clientHeight;
         } 
     } //if  I dont do this resize ruins the particles
 
@@ -153,12 +153,12 @@ function spawn() {
 	
 }
 window.onresize = function () {
-    if(window.screen.width>1024){
+    if(document.body.clientWidth>1024){
         location.reload();
     }
     else{
-    canvas.width = window.screen.width;
-    canvas.height = window.screen.height;
+    canvas.width = document.body.clientWidth;
+    canvas.height = document.body.clientHeight;
     spawn();
     }
 }
