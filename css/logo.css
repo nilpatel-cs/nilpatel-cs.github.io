@@ -2,7 +2,7 @@ body
 { 
     background: radial-gradient(#404040 15%,#121212 85%);
     color:whitesmoke;
-    overflow:hidden;
+    overflow-y:hidden;
 }
 
 #logo {
