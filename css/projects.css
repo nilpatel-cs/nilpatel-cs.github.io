@@ -1,0 +1,93 @@
+
+  h1{
+    padding-top:1rem;
+    text-align: center;
+  }
+
+  .body{
+    margin-top: 40px;
+}
+  main{
+    height:auto;
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,23%);
+    grid-auto-rows:40vh;
+    grid-gap: 1%; 
+  }
+  main img{
+    width:100%;
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: darkorange;
+  }
+  main h4{
+    text-align:center;
+  }
+  main div{
+      align-items: center;
+  }
+  .description{
+    padding-right:2%;
+    padding-top:1%;
+  }
+  .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    background-color: darkorange;
+  }
+  /*call to action to qualifications pages*/
+  #callToQualifications{
+    position: absolute;
+    width:20%;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
+    z-index:2;
+  }
+  
+  @media only screen and (max-width: 1024px){
+    main{
+      grid-template-columns: repeat(auto-fit,48%);
+      grid-auto-rows: auto;
+      margin-bottom: 10%;
+    }
+    #callToQualifications{
+      width:60%;  
+      position: relative;
+      margin-bottom: 5%;
+    }
+  }
+  @media only screen and (max-width: 768px){
+    main{
+      position: relative;
+      height:100%;
+      margin-bottom:15%;
+      grid-template-columns: repeat(auto-fit,98%);
+    }
+    #callToQualifications{
+      width:80%;
+      bottom: 0%;
+      padding-bottom: 5%;
+      margin-bottom: -40%;
+    }
+
+  }
+  @media only screen and (max-width: 420px){
+    
+    #callToQualifications{
+      width:80%;
+      bottom: 0%;
+      padding-bottom: 5%;
+      margin-bottom: -105%;
+    }
+
+  }
+
+  @media only screen and (max-width: 420px) and (max-height:600px){
+    
+    #callToQualifications{
+      width:80%;
+      bottom: 0%;
+      margin-bottom: -130%;
+    }
+
+  }
