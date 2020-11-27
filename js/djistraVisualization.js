@@ -1,14 +1,13 @@
 const canvas = document.getElementById("djikstra");
 const context = canvas.getContext("2d");
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
+canvas.width = window.screen.width;
+console.log(canvas.width);
+canvas.height = window.screen.height;
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
 
-if (window.innerWidth > 1024 || screen.width >1024) {
+if (window.screen.width > 1024) {
     var particleArray = null;
     let mouse = {
         x: -1,
@@ -22,12 +21,13 @@ if (window.innerWidth > 1024 || screen.width >1024) {
     });
 
     window.onresize = function () { 
-        if(window.innerWidth<=1024){
+        if(window.screen.width<=1024){
             location.reload();
         }
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        
+        else{
+        canvas.width = window.screen.width;
+        canvas.height = window.screen.height;
+        } 
     } //if  I dont do this resize ruins the particles
 
     window.addEventListener("mouseout", function (event) {
@@ -153,12 +153,12 @@ function spawn() {
 	
 }
 window.onresize = function () {
-    if(window.innerWidth>1024){
+    if(window.screen.width>1024){
         location.reload();
     }
     else{
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.screen.width;
+    canvas.height = window.screen.height;
     spawn();
     }
 }
@@ -309,20 +309,7 @@ function djikstra() {
 
 
   //calculate the distance between two particles
-    function dist(u, v) {
-        result = Math.sqrt(Math.pow(u.x - v.x, 2) + Math.pow(u.y - v.y, 2));
-        return result;
-    }
-
-    function iOS() {
-        return [
-        'iPad Simulator',
-        'iPhone Simulator',
-        'iPod Simulator',
-        'iPad',
-        'iPhone',
-        'iPod'
-        ].includes(navigator.platform)
-        // iPad on iOS 13 detection
-        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
-    }
+  function dist(u, v) {
+    result = Math.sqrt(Math.pow(u.x - v.x, 2) + Math.pow(u.y - v.y, 2));
+    return result;
+}
