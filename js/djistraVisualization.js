@@ -9,7 +9,7 @@ var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
 
-if ($(window).width() > 1024) {
+if (window.innerWidth > 1024 || screen.width >1024) {
     var particleArray = null;
     let mouse = {
         x: -1,
@@ -23,7 +23,7 @@ if ($(window).width() > 1024) {
     });
 
     window.onresize = function () { 
-        if(window.innerWidth<=1024){
+        if(window.innerWidth<=1024 || screen.width <= 1024){
             location.reload();
         }
         else{
