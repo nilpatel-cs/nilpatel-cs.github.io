@@ -23,7 +23,7 @@ function createFullPage(){
         licenseKey: 'DA5C4E34-DEE54132-A7CE51CB-4D3ED1AB',
         autoScrolling: true,
         navigation: true,
-        responsive:1201,
+        responsive:1025,
         onLeave: (origin, destination, direction) => {
             let section = destination.item;
             let title = section.querySelector("h1");
