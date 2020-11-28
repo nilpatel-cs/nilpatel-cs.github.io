@@ -45,7 +45,7 @@ h1{
     grid-area:bottom;
 }
 .grid-1, .grid-2, .grid-3{
-    background-color:#303030;
+    background-color:#181818;
     color: whitesmoke;
     display:grid;
     justify-items: center;
@@ -115,6 +115,7 @@ h1{
     #fullPage p,#fullPage ul{
         padding-left:5%;
         padding-right:5%;
+        bottom: 1%;
     }
     #fullPage{
         display:block;
@@ -142,7 +143,7 @@ h1{
     .grid-container, .grid-container-2 {
         height:100%;
         width:100%;
-        background-color: rgba(30,30,30,.8);
+        background-color: rgba(18,18,18,.8);
         color:whitesmoke;
         display:grid;
         grid-template-rows: .5fr 1fr 9fr;
@@ -157,7 +158,7 @@ h1{
     .grid-container-2 {
         height:100%;
         width:100%;
-        background-color: rgba(30,30,30,.8);
+        background-color: rgba(18,18,18,.8);
         color:whitesmoke;
         display:grid;
         grid-template-rows: 1fr 1fr 5fr 5fr;

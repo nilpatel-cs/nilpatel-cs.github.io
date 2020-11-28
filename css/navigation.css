@@ -21,7 +21,7 @@ nav a {
     z-index: 1;
     padding-left:30%;
     padding-right: 30%;
-    background-color: #303030;
+    background-color: #181818;
 }
     
 /*css for line animation on top menu items*/
@@ -75,7 +75,7 @@ nav a {
     bottom:0;
     width:100%;
     z-index: 1;
-    background-color: #303030;
+    background-color: #181818;
     
 }
 .social-nav a{
@@ -89,11 +89,11 @@ nav a {
 }
 /*css for modal*/
 .modal-header {
-    background-color: #505050;
+    background-color: #303030;
 }
 
 .modal-body {
-    background-color: #303030;
+    background-color: #181818;
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;
 }
