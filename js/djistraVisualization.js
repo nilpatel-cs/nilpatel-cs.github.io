@@ -1,12 +1,12 @@
 const canvas = document.getElementById("djikstra");
-canvas.width = document.body.getBoundingClientRect.width;
-canvas.height = document.body.getBoundingClientRect.height;
 const context = canvas.getContext("2d");
+canvas.width = document.body.clientWidth;
+canvas.height = document.body.clientHeight;
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
 
-if (document.body.getBoundingClientRect.width > 1024) {
+if (document.body.clientWidth > 1024) {
     var particleArray = null;
     let mouse = {
         x: -1,
@@ -137,9 +137,7 @@ if (document.body.getBoundingClientRect.width > 1024) {
     animate();
 }
 else{
-
-document.getElementById('ios').innerHTML = 'I AM ALIVE';
-    
+document.getElementById('ios').innerHTML='I Work'   
 var particleArray = null;
 
 

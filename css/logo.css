@@ -19,10 +19,12 @@ html,body
 }
 
 #ios{
-    align-self: center;
-    justify-self: bottom;
+    position: absolute;
+    top:50%;
+    left:50%;
     z-index: 500;
     font-size: larger;
+    color: hotpink;
 }
 
 
