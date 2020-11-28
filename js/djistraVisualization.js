@@ -1,5 +1,5 @@
-const canvas = document.getElementById("djikstra");
-const context = canvas.getContext("2d");
+var canvas = document.getElementById("djikstra");
+var context = canvas.getContext("2d");
 canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
 var script = document.createElement('script');
