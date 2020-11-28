@@ -30,8 +30,8 @@
   .description{
     padding-right:2%;
     padding-top:1%;
-    background-color: #202020;
-    border-radius: 1%;
+    background-color: #323232;
+    border-radius: 2%;
   }
   .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
     background-color: darkorange;
@@ -59,7 +59,7 @@
       margin-bottom: 5%;
     }
   }
-  @media only screen and (max-width: 768px){
+  @media (max-width: 768px){
     main{
       position: relative;
       height:100%;
@@ -73,7 +73,7 @@
     }
 
   }
-@media only screen and (max-width:540px){
+@media (max-width:540px){
   #callToQualifications{
     margin-bottom: -70%;
   }

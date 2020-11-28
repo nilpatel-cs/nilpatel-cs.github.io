@@ -1,8 +1,8 @@
 html,body
 { 
-    background: radial-gradient(#181818 15%,#000000 85%);
+    background: radial-gradient(#404040 15%,#121212 85%);
     color:whitesmoke;
-    overflow:hidden;
+    overflow-y:hidden;
     height:100vh;
 }
 
@@ -23,5 +23,12 @@ html,body
 @media only screen and (max-width:1024px){
     #logo{
         width:60%;
+    }
+}
+
+@media only screen and (max-width:767px){
+
+    body{
+        background: black;
     }
 }

@@ -21,7 +21,7 @@ nav a {
     z-index: 1;
     padding-left:30%;
     padding-right: 30%;
-    background-color: #181818;
+    background-color: #303030;
 }
     
 /*css for line animation on top menu items*/
@@ -75,7 +75,7 @@ nav a {
     bottom:0;
     width:100%;
     z-index: 1;
-    background-color: #181818;
+    background-color: #303030;
     
 }
 .social-nav a{
@@ -89,11 +89,11 @@ nav a {
 }
 /*css for modal*/
 .modal-header {
-    background-color: #303030;
+    background-color: #353535;
 }
 
 .modal-body {
-    background-color: #181818;
+    background-color: #303030;
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;
 }
@@ -109,7 +109,7 @@ nav a {
 #tooltip {
     visibility: hidden;
     background: darkorange;
-    color: #151515;
+    color: #303030;
     padding: .5rem;
     position: absolute;
     box-shadow: .25rem .5rem;
