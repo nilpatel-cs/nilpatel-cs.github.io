@@ -2,7 +2,7 @@ html,body
 { 
     background: radial-gradient(#404040 15%,#121212 85%);
     color:whitesmoke;
-    overflow-y:hidden;
+    overflow:hidden;
     height:100vh;
 }
 
