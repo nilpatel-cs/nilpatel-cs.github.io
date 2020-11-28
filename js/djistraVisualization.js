@@ -137,7 +137,7 @@ if (document.body.clientWidth > 1024) {
     animate();
 }
 else{
-document.getElementById('ios').innerHTML= canvas.width    
+document.getElementById('ios').innerHTML= canvas.height;   
 var particleArray = null;
 
 
