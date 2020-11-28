@@ -6,7 +6,7 @@ var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
 script.type = 'text/javascript';
 
-if (document.body.clientWidth > 1024) {
+if (document.body.getBoundingClientRect.width > 1024) {
     var particleArray = null;
     let mouse = {
         x: -1,
