@@ -62,12 +62,12 @@ if (document.body.clientWidth > 1024) {
             this.id = i;
             this.x = mouse.x + plusMinus() * Math.random() * canvas.height / 10;
             this.y = mouse.y + plusMinus() * Math.random() * Math.sqrt(Math.pow(canvas.height / 10, 2) - Math.pow(this.x - mouse.x, 2));
-            this.size = 3;
+            this.size = 2;
 			this.xVelocity = plusMinus() * Math.random() * (canvas.height / 5000);
             this.yVelocity = plusMinus() * Math.random() * (canvas.height / 5000);
             context.beginPath();
-            context.fillStyle = "white";
-            context.strokeStyle = "white";
+            context.fillStyle = "rgba(240,240,240,.8)";
+            context.strokeStyle = "rgba(240,240,240,.8)";
             context.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
             context.closePath();
             context.fill();
@@ -76,16 +76,16 @@ if (document.body.clientWidth > 1024) {
             this.x += x;
             this.y += y;
             context.beginPath();
-            context.fillStyle = "white";
-            context.strokeStyle = "white";
+            context.fillStyle = "rgba(240,240,240,.8)";
+            context.strokeStyle = "rgba(240,240,240,.8)";
             context.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
             context.closePath();
             context.fill();
         }
         draw() {
             context.beginPath();
-            context.fillStyle = "white";
-            context.strokeStyle = "white";
+            context.fillStyle = "rgba(240,240,240,.8)";
+            context.strokeStyle = "rgba(240,240,240,.8)";
             context.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
             context.closePath();
             context.fill();
@@ -103,7 +103,7 @@ if (document.body.clientWidth > 1024) {
     function drawLine(u, v) {
         context.beginPath();
         context.setLineDash([]);
-        context.strokeStyle = "darkOrange";
+        context.strokeStyle = "rgba(255,140,0,.8)";
         context.lineWidth = 15/dist(u, v);
         context.moveTo(u.x, u.y);
         context.lineTo(v.x, v.y);
@@ -112,7 +112,7 @@ if (document.body.clientWidth > 1024) {
     
     function drawLineFormer(u, v) {
         context.beginPath();
-        context.strokeStyle = "rgba(192,192,192,.5)";
+        context.strokeStyle = "rgba(200,200,200,.5)";
         context.moveTo(u.x, u.y);
         context.lineTo(v.x, v.y);
         context.lineWidth = 10/dist(u, v);
@@ -137,7 +137,7 @@ if (document.body.clientWidth > 1024) {
     animate();
 }
 else{
-document.getElementById('ios').innerHTML= canvas.height;   
+   
 var particleArray = null;
 
 
@@ -170,11 +170,11 @@ class particle {
 
         this.y = canvas.height / 2 + plusMinus() *Math.random()* Math.sqrt(Math.pow(canvas.width / 4, 2) - Math.pow(this.x - canvas.width / 2, 2));
         if(canvas.width<650)
-            this.size = 2;
+            this.size = 1;
         else
-            this.size = 3;
-        this.xVelocity = plusMinus() * Math.random() * (canvas.width / 300);
-        this.yVelocity = plusMinus() * Math.random() * (canvas.width / 300);
+            this.size = 1.5;
+        this.xVelocity = plusMinus() * Math.random() * (canvas.width / 1200);
+        this.yVelocity = plusMinus() * Math.random() * (canvas.width / 1200);
         this.draw();
     }
 
