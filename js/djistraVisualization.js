@@ -1,6 +1,6 @@
 const canvas = document.getElementById("djikstra");
-canvas.width = document.body.clientWidth;
-canvas.height = document.body.clientHeight;
+canvas.width = document.body.getBoundingClientRect.width;
+canvas.height = document.body.getBoundingClientRect.height;
 const context = canvas.getContext("2d");
 var script = document.createElement('script');
 script.src = "//code.jquery.com/jquery-3.5.1.slim.min.js";
@@ -137,6 +137,8 @@ if (document.body.clientWidth > 1024) {
     animate();
 }
 else{
+
+document.getElementById('ios').innerHTML = 'I AM ALIVE';
     
 var particleArray = null;
 

@@ -18,6 +18,13 @@ html,body
     background-color: transparent;
 }
 
+#ios{
+    align-self: center;
+    justify-self: bottom;
+    z-index: 500;
+    font-size: larger;
+}
+
 
 @media only screen and (max-width:1024px){
     #logo{
