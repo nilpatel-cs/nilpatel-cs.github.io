@@ -1,4 +1,4 @@
-const canvas = document.getElementById('djikstra');
+const canvas = document.getElementById('dijkstra');
 const context = canvas.getContext('2d');
 canvas.width=document.body.getBoundingClientRect().width;
 canvas.height=document.body.getBoundingClientRect().height;
@@ -202,7 +202,7 @@ var mouse = {
             for (i = 0; i < particleArray.length; i++) {
                 particleArray[i].move();
             }
-            djikstra();
+            dijkstra();
         }
         else{
             return;
@@ -227,7 +227,7 @@ function plusMinus() {
     return sign;
 }
 
-function djikstra() {
+function dijkstra() {
     var connected = [];
     var distance = [];
     var vertex = [];
