@@ -92,8 +92,8 @@ var mouse = {
                 this.yVelocity = plusMinus() * Math.random() * (canvas.width / 1200);
             }
             else{
-                this.x = mouse.x + plusMinus() * Math.random() * canvas.height / 10;
-                this.y = mouse.y + plusMinus() * Math.random() * Math.sqrt(Math.pow(canvas.height / 10, 2) - Math.pow(this.x - mouse.x, 2));
+                this.x = mouse.x + plusMinus() * Math.random() * canvas.height / 20;
+                this.y = mouse.y + plusMinus() * Math.random() * Math.sqrt(Math.pow(canvas.height / 20, 2) - Math.pow(this.x - mouse.x, 2));
                 this.size = 2;
                 this.xVelocity = plusMinus() * Math.random() * (canvas.height / 5000);
                 this.yVelocity = plusMinus() * Math.random() * (canvas.height / 5000);
@@ -128,7 +128,7 @@ var mouse = {
                     this.yVelocity *= -1;
                 }
             }
-            else if (canvas.height / 10 < Math.sqrt(Math.pow(this.x + this.xVelocity - mouse.x, 2) + Math.pow(this.y + this.yVelocity - mouse.y, 2))) {
+            else if (canvas.height / 20 < Math.sqrt(Math.pow(this.x + this.xVelocity - mouse.x, 2) + Math.pow(this.y + this.yVelocity - mouse.y, 2))) {
                 this.xVelocity *= -1;
                 this.yVelocity *= -1;
             }
@@ -162,7 +162,7 @@ var mouse = {
             context.beginPath();
             context.setLineDash([]);
             context.strokeStyle = "rgba(255,140,0,.8)";
-            context.lineWidth = 1.5 * ( ((canvas.height/5) - dist(u,v)) / (canvas.height/5) );
+            context.lineWidth = 1.5 * ( ((canvas.height/10) - dist(u,v)) / (canvas.height/10) );
             context.moveTo(u.x, u.y);
             context.lineTo(v.x, v.y);
             context.stroke();
@@ -188,7 +188,7 @@ var mouse = {
             context.strokeStyle = "rgba(200,200,200,.5)";
             context.moveTo(u.x, u.y);
             context.lineTo(v.x, v.y);
-            context.lineWidth = .75 * ( ((canvas.height/5) - dist(u,v)) / (canvas.height/5) );
+            context.lineWidth = .75 * ( ((canvas.height/10) - dist(u,v)) / (canvas.height/10) );
             context.setLineDash([5]);
             context.stroke();
         }
