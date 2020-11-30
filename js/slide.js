@@ -8,6 +8,7 @@ var path = new Array();
 path[0] = "images/coursera.jpg";
 path[1] = "images/coursera1.jpg";
 path[2] = "images/hackerrank.png";
+path[3] = "images/hackerrank2.png";
 
 const certificate = document.getElementById("certificates");
 const mobileCertificate = document.getElementById("mobileCertificates"); 
