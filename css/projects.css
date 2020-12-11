@@ -12,7 +12,7 @@
     position: relative;
     display:grid;
     grid-template-columns: repeat(auto-fit,23%);
-    grid-auto-rows:40vh;
+    grid-auto-rows:45vh;
     grid-gap: 1%; 
   }
   main img{
@@ -60,7 +60,7 @@
     bottom:0;
     transform:translateX(-50%);
     z-index:2;
-    margin-bottom: -20%;
+    margin-bottom: -25%;
   }
   
   @media only screen and (max-width: 1024px){

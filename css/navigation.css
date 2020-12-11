@@ -18,7 +18,7 @@ nav a {
     left:50%;
     transform:translateX(-50%);
     width:100%;
-    z-index: 1;
+    z-index: 2;
     padding-left:30%;
     padding-right: 30%;
     background-color: #303030;
@@ -74,7 +74,7 @@ nav a {
     position:fixed;
     bottom:0;
     width:100%;
-    z-index: 1;
+    z-index: 2;
     background-color: #303030;
     
 }
