@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<title>Yeah Buddy Palworld Server Login</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    <style>
+        body {
+            background-color: rgb(15, 15, 15);
+            color: whitesmoke;
+            margin: 0; /* Remove default margin */
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh; /* Ensure at least full viewport height */
+        }
+
+        .copyText {
+            text-align: center;
+            cursor: pointer; /* Add cursor style to indicate it's clickable */
+            user-select: all; /* Allow user to select the text */
+            margin-bottom: 10px; /* Add some spacing between the lines */
+            display: block; /* Change display to block */
+            font-size: 20px;
+            position: relative;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -60px; /* Adjust the margin to center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .copyText.clicked .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="copyText" onclick="copyText(this, 'Server IP: 51.161.118.81:27000')">
+        <strong>Server IP: 51.161.118.81:27000</strong>
+        <div class="tooltip">Copied!</div>
+    </div>
+    
+    <div class="copyText" onclick="copyText(this, 'Server Password: ^vwKG4nL')">
+        <strong>Server Password: ^vwKG4nL</strong>
+        <div class="tooltip">Copied!</div>
+    </div>
+
+    <script>
+        function copyText(element, text) {
+            // Extract text after the colon
+            var textToCopy = text.split(': ')[1] || text;
+            
+            var dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = textToCopy;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+            
+            // Add a "clicked" class to the element
+            element.classList.add('clicked');
+            
+            // Show the tooltip
+            var tooltip = element.querySelector('.tooltip');
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = 1;
+            
+            // Hide the tooltip after 2 seconds (adjust the timeout as needed)
+            setTimeout(function(){
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.opacity = 0;
+                
+                // Remove the "clicked" class
+                element.classList.remove('clicked');
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
+
